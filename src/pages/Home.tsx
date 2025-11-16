@@ -302,7 +302,7 @@ export default function Home({ onNavigate }: HomeProps) {
             {stats.map((stat, index) => (
               <ScrollReveal key={index} direction="up" delay={index * 120} duration={0.7} ease={[0.25, 0.46, 0.45, 0.94]}>
                 <motion.div
-                  className="text-center p-4 sm:p-6 rounded-2xl glass-effect hover-lift group cursor-pointer"
+                  className="text-center p-4 sm:p-6 rounded-2xl bg-transparent hover-lift group cursor-pointer"
                   whileHover={{
                     scale: 1.05,
                     transition: { duration: 0.3, ease: "easeOut" }
