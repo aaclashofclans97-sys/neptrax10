@@ -135,7 +135,7 @@ export default function Home({ onNavigate }: HomeProps) {
             <ScrollReveal direction="up" delay={100} duration={0.9} ease={[0.25, 0.46, 0.45, 0.94]}>
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font text-[#f1f5f9] mb-4 sm:mb-6 leading-tight">
                 Launch your brand online <br className="hidden sm:block" />
-                <span className="bg-gradient-to-r from-[#2e4fdc] to-[#4da6ff] bg-clip-text text-transparent">
+                <span className="gradient-text">
                   with a website built to
                 </span>
                 <br className="hidden sm:block" />
@@ -153,8 +153,8 @@ export default function Home({ onNavigate }: HomeProps) {
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-12 sm:mb-16 justify-center lg:justify-start px-4 sm:px-0">
                 <motion.button
                   onClick={() => onNavigate('contact')}
-                  className="px-8 sm:px-12 md:px-16 py-3 sm:py-4 rounded-full bg-gradient-to-r from-[#2563eb] to-[#1e3a8a] text-[#f1f5f9] font-medium hover:shadow-[0_0_30px_rgba(37,99,235,0.6)] transition-all duration-300 text-sm sm:text-base relative overflow-hidden group"
-                  whileHover={{ 
+                  className="btn-primary ripple px-8 sm:px-12 md:px-16 py-3 sm:py-4 rounded-full bg-gradient-to-r from-[#2563eb] to-[#1e3a8a] text-[#f1f5f9] font-medium hover:shadow-[0_0_30px_rgba(37,99,235,0.6)] transition-all duration-300 text-sm sm:text-base relative overflow-hidden group"
+                  whileHover={{
                     scale: 1.05,
                     transition: { duration: 0.2, ease: "easeOut" }
                   }}
@@ -166,8 +166,8 @@ export default function Home({ onNavigate }: HomeProps) {
                 
                 <motion.button
                   onClick={() => onNavigate('portfolio')}
-                  className="group relative px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full bg-transparent border-2 border-purple-400/50 text-[#f1f5f9] font-medium overflow-hidden transition-all duration-500 hover:border-purple-400 hover:shadow-2xl hover:shadow-purple-500/25 backdrop-blur-sm flex items-center justify-center gap-2 text-sm sm:text-base"
-                  whileHover={{ 
+                  className="btn-secondary hover-glow group relative px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full bg-transparent border-2 border-purple-400/50 text-[#f1f5f9] font-medium overflow-hidden transition-all duration-500 hover:border-purple-400 hover:shadow-2xl hover:shadow-purple-500/25 backdrop-blur-sm flex items-center justify-center gap-2 text-sm sm:text-base"
+                  whileHover={{
                     scale: 1.05,
                     transition: { duration: 0.2, ease: "easeOut" }
                   }}
@@ -192,9 +192,9 @@ export default function Home({ onNavigate }: HomeProps) {
                   <motion.img
                     src="/brand logo/google.png"
                     alt="Google"
-                    className="h-6 sm:h-8 filter brightness-0 saturate-0 transition-transform duration-300"
+                    className="h-6 sm:h-8 filter brightness-0 saturate-0 hover-scale cursor-pointer"
                     style={{ filter: 'brightness(0) saturate(100%) invert(1) sepia(1) saturate(0.5) hue-rotate(200deg) brightness(0.9)' }}
-                    whileHover={{ 
+                    whileHover={{
                       scale: 1.1,
                       transition: { duration: 0.2, ease: "easeOut" }
                     }}
@@ -202,9 +202,9 @@ export default function Home({ onNavigate }: HomeProps) {
                   <motion.img
                     src="/brand logo/stripe.png"
                     alt="Stripe"
-                    className="h-8 sm:h-10 md:h-14 filter brightness-0 saturate-0 transition-transform duration-300"
+                    className="h-8 sm:h-10 md:h-14 filter brightness-0 saturate-0 hover-scale cursor-pointer"
                     style={{ filter: 'brightness(0) saturate(100%) invert(1) sepia(1) saturate(0.5) hue-rotate(200deg) brightness(0.9)' }}
-                    whileHover={{ 
+                    whileHover={{
                       scale: 1.1,
                       transition: { duration: 0.2, ease: "easeOut" }
                     }}
@@ -212,9 +212,9 @@ export default function Home({ onNavigate }: HomeProps) {
                   <motion.img
                     src="/brand logo/vercel.png"
                     alt="Vercel"
-                    className="h-8 sm:h-10 md:h-14 filter brightness-0 saturate-0 transition-transform duration-300"
+                    className="h-8 sm:h-10 md:h-14 filter brightness-0 saturate-0 hover-scale cursor-pointer"
                     style={{ filter: 'brightness(0) saturate(100%) invert(1) sepia(1) saturate(0.5) hue-rotate(200deg) brightness(0.9)' }}
-                    whileHover={{ 
+                    whileHover={{
                       scale: 1.1,
                       transition: { duration: 0.2, ease: "easeOut" }
                     }}
@@ -249,15 +249,15 @@ export default function Home({ onNavigate }: HomeProps) {
               {clients.slice(0, 3).map((client, index) => (
                 <ScrollReveal key={index} direction="up" delay={index * 120} duration={0.7} ease={[0.25, 0.46, 0.45, 0.94]}>
                   <motion.div
-                    className="rounded-2xl p-4 sm:p-6 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.2)] hover:shadow-[0_0_30px_rgba(37,99,235,0.3)] h-full border border-[#334155] hover:border-[#2563eb] backdrop-blur-sm"
+                    className="card-interactive glass-effect rounded-2xl p-4 sm:p-6 shadow-[0_4px_20px_rgba(0,0,0,0.2)] hover:shadow-[0_0_30px_rgba(37,99,235,0.3)] h-full border border-[#334155] hover:border-[#2563eb] group cursor-pointer"
                     whileHover={{
                       scale: 1.03,
                       y: -5,
                       transition: { duration: 0.3, ease: "easeOut" }
                     }}
                   >
-                    <client.icon className="text-[#2563eb] mb-3 sm:mb-4" size={isMobile ? 24 : 32} />
-                    <h3 className="text-lg sm:text-xl font-bold text-[#f1f5f9] mb-2">{client.title}</h3>
+                    <client.icon className="text-[#2563eb] mb-3 sm:mb-4 group-hover:animate-pulse-gentle transition-all" size={isMobile ? 24 : 32} />
+                    <h3 className="text-lg sm:text-xl font-bold text-[#f1f5f9] mb-2 group-hover:text-glow transition-all">{client.title}</h3>
                     <p className="text-[#94a3b8] text-xs sm:text-sm">{client.description}</p>
                   </motion.div>
                 </ScrollReveal>
@@ -271,15 +271,15 @@ export default function Home({ onNavigate }: HomeProps) {
               {clients.slice(3).map((client, index) => (
                 <ScrollReveal key={index + 3} direction="up" delay={(index + 3) * 120} duration={0.7} ease={[0.25, 0.46, 0.45, 0.94]}>
                   <motion.div
-                    className="rounded-2xl p-4 sm:p-6 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.2)] hover:shadow-[0_0_30px_rgba(37,99,235,0.3)] h-full border border-[#334155] hover:border-[#2563eb] backdrop-blur-sm"
+                    className="card-interactive glass-effect rounded-2xl p-4 sm:p-6 shadow-[0_4px_20px_rgba(0,0,0,0.2)] hover:shadow-[0_0_30px_rgba(37,99,235,0.3)] h-full border border-[#334155] hover:border-[#2563eb] group cursor-pointer"
                     whileHover={{
                       scale: 1.03,
                       y: -5,
                       transition: { duration: 0.3, ease: "easeOut" }
                     }}
                   >
-                    <client.icon className="text-[#2563eb] mb-3 sm:mb-4" size={isMobile ? 24 : 32} />
-                    <h3 className="text-lg sm:text-xl font-bold text-[#f1f5f9] mb-2">{client.title}</h3>
+                    <client.icon className="text-[#2563eb] mb-3 sm:mb-4 group-hover:animate-pulse-gentle transition-all" size={isMobile ? 24 : 32} />
+                    <h3 className="text-lg sm:text-xl font-bold text-[#f1f5f9] mb-2 group-hover:text-glow transition-all">{client.title}</h3>
                     <p className="text-[#94a3b8] text-xs sm:text-sm">{client.description}</p>
                   </motion.div>
                 </ScrollReveal>
@@ -301,17 +301,17 @@ export default function Home({ onNavigate }: HomeProps) {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {stats.map((stat, index) => (
               <ScrollReveal key={index} direction="up" delay={index * 120} duration={0.7} ease={[0.25, 0.46, 0.45, 0.94]}>
-                <motion.div 
-                  className="text-center p-4 sm:p-6 rounded-2xl transition-all duration-300 backdrop-blur-sm"
-                  whileHover={{ 
+                <motion.div
+                  className="text-center p-4 sm:p-6 rounded-2xl glass-effect hover-lift group cursor-pointer"
+                  whileHover={{
                     scale: 1.05,
                     transition: { duration: 0.3, ease: "easeOut" }
                   }}
                 >
-                  <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#2563eb] to-[#3b82f6] bg-clip-text text-transparent mb-2">
+                  <div className="text-3xl sm:text-4xl md:text-5xl font-bold gradient-text mb-2 group-hover:animate-glow-pulse">
                     {stat.number}
                   </div>
-                  <div className="text-[#94a3b8] text-sm sm:text-base">{stat.label}</div>
+                  <div className="text-[#94a3b8] text-sm sm:text-base group-hover:text-[#cbd5e1] transition-colors">{stat.label}</div>
                 </motion.div>
               </ScrollReveal>
             ))}
@@ -337,8 +337,8 @@ export default function Home({ onNavigate }: HomeProps) {
           <ScrollReveal direction="up" delay={250} duration={0.9} ease={[0.25, 0.46, 0.45, 0.94]}>
             <motion.button
               onClick={() => onNavigate('contact')}
-              className="px-8 sm:px-10 py-3 sm:py-4 rounded-full bg-gradient-to-r from-[#2563eb] to-[#1e3a8a] text-[#f1f5f9] font-medium text-base sm:text-lg hover:shadow-[0_0_40px_rgba(37,99,235,0.7)] transition-all duration-300 border border-[#3b82f6] hover:border-[#60a5fa] relative overflow-hidden group"
-              whileHover={{ 
+              className="btn-primary ripple animate-glow-pulse px-8 sm:px-10 py-3 sm:py-4 rounded-full bg-gradient-to-r from-[#2563eb] to-[#1e3a8a] text-[#f1f5f9] font-medium text-base sm:text-lg hover:shadow-[0_0_40px_rgba(37,99,235,0.7)] transition-all duration-300 border border-[#3b82f6] hover:border-[#60a5fa] relative overflow-hidden group"
+              whileHover={{
                 scale: 1.05,
                 transition: { duration: 0.2, ease: "easeOut" }
               }}
